@@ -9,3 +9,13 @@
 * The top 5 locations that have highest frequency of crimes occurence remain the same in both years. Street is the most dangerous place if we take the frequency of crimes as an indicator. For the changes in proportions to total crimes, apartments have a higher proportion in 2018 while others have slightly decrease.
 ![fig5](https://github.com/haonen/Markdown-Photos/blob/master/loc_cnt.png?raw=true)
 ![fig6](https://github.com/haonen/Markdown-Photos/blob/master/loc_pro.png?raw=true)
+
+# Problem 4
+## A
+## B
+## C
+According to Bayes' theorem:   
+P(Battery | Garfield Park) = P(Battery) * P(Garfield Park | Battery)/P(Garfield Park) = ((100+160)/1000 * (100/100+160))/(600/1000)=1/6   
+P(Battery | Uptown) = P(Battery) * P(Uptown | Battery)/P(Uptown) = 2/5   
+2/5-1/6 = 0.23   
+So, the probability that this call comes from Uptown is roughly 23% higher than the probability of it coming from Garfield Park.
