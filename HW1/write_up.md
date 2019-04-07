@@ -12,7 +12,33 @@
 
 # Problem 4
 ## A
+2111 S Michigan Ave is in the Near South Side (Community Aread code is 33) of Chicago. I first filter out all the records from this community and then count the value of each crime type. Divide the number of records for each type by the length of all the records from Near South Side, I can find out the the probabilities for each type of request. And theft is the one with highest probability.   
+![figp4a](https://github.com/haonen/Markdown-Photos/blob/master/p4a.JPG?raw=true)
+
 ## B
+The commnuity area code for Uptown is 3 and for Garfield Park is 26 and 17. For each year report, I first filter out the theft records and then filter out the records happened in Uptown or Garfield Park. Dividing the value counts for each community area by the length of theft records for each year, I can come up with the estimates of probability. 
+<table>
+  <tr>
+    <th>Community Area</th>
+    <th>Probability 2017</th>
+    <th>Probability 2018</th>
+  </tr>
+  <tr>
+    <td>Uptown</td>
+    <td>0.015044</td>
+    <td>0.015151</td>
+  </tr>
+  <tr>
+    <td>Garfield Park</td>
+    <td>0.009061 + 0.008983 = 0.018044</td>
+    <td>0.010802 + 0.009681 = 0.117701</td>
+  </tr>
+</table>
+
+
+In 2017, it is more likely that this call comes from Garfield Park and it has 0.018044 - 0.015044 = 0.003 higher probability.   
+In 2018, albeit the theft happended in both communities rorse, it is still more likely that this call comes from  Garfield Park and it has 0.117701 - 0.015151 = 0.10255 higher probability.   
+  
 ## C
 According to Bayes' theorem:   
 P(Battery | Garfield Park) = P(Battery) * P(Garfield Park | Battery)/P(Garfield Park) = ((100+160)/1000 * (100/100+160))/(600/1000)=1/6   
