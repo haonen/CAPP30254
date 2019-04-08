@@ -10,6 +10,51 @@
 ![fig5](https://github.com/haonen/Markdown-Photos/blob/master/loc_cnt.png?raw=true)
 ![fig6](https://github.com/haonen/Markdown-Photos/blob/master/loc_pro.png?raw=true)
 
+# Problem 2
+For this problem, in order to save the time of getting zipcode from geocode by using Google Map API, I filter out dataframes for the four crime types specified in questions with locations that have more than 10 crime records. And then I use the Census API (American Facts Finder) and pick some variables on zipcode level from 2013-2017 American Community Survey 5-Year Estimates: unemployment rate, median household income, poverty rate, rate for four main races (white, black, hispanic or latino and asian), family size. I filter out the data frame for ACS data by checking whether these zipcodes are in crime reports. And I analyze the filtered data frames for different crime types and different years to see if it varies in characteristics of locations of different years or in different crime types.
+## 1.
+!fig[7]
+## 2.
+!fig[8]
+## 3. 
+![fig9](https://github.com/haonen/Markdown-Photos/blob/master/picture_battery.png?raw=true)
+
+![fig10](https://github.com/haonen/Markdown-Photos/blob/master/picture_homicide.png?raw=true)
+## 4.
+<img src="https://github.com/haonen/Markdown-Photos/blob/master/so_dp.JPG?raw=true" alt="drawing" width="400"/>
+
+# Problem 3  
+## 1.
+## 2.
+### A
+These statistics are not correct. Here is my output:
+ ```
+Robbery increase:-17.304%
+Battery increase:4.172%
+Burglary increase:-12.074%
+Motor vehicle theft increase:-12.072%
+ ```
+ I guess that they might mistake the formula for calculating increase in percentage. For example, if they take the number of records in 2018 as denominator and mistake the sign, then the percentage increase would be roughly 21% (but actually it is decreasing).   
+ ### B
+These results could be misleading and I do not aggree with his conclusion. Because the choose of time frame is arbitrary and if we pick different time frame, the result could be inconsistent. For instance, here is the output for July:
+```
+Robbery increase:-12.749%
+Battery increase:3.807%
+Burglary increase:-5.556%
+Motor vehicle theft increase:-12.714%
+```
+And the result for July 26th:
+```
+Robbery increase:25.926%
+Battery increase:0.0%
+Burglary increase:-10.87%
+Motor vehicle theft increase:-24.138%
+```
+For the comparison of July, the robbery decrease but for the particular day, the robbery actually increase a lot. And for Battery, it increase for the time frame of July but remain constant for particular day. So, if we pick different time frame, we might have different conclusions. And we cannot ensure that the time frame we pick guarantee roughly the same enviornment or context for crimes in both years.   
+## 3
+## 4
+
+
 # Problem 4
 ## A
 2111 S Michigan Ave is in the Near South Side (Community Aread code is 33) of Chicago. I first filter out all the records from this community and then count the value of each crime type. Divide the number of records for each type by the length of all the records from Near South Side, I can find out the the probabilities for each type of request. And theft is the one with highest probability.   
