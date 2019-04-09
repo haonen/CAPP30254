@@ -111,7 +111,30 @@ I would provide the caveats saying that since all of my analysis above is based 
 # Problem 4
 ## A
 2111 S Michigan Ave is in the Near South Side (Community Aread code is 33) of Chicago. I first filter out all the records from this community and then count the value of each crime type. Divide the number of records for each type by the length of all the records from Near South Side, I can find out the the probabilities for each type of request. And theft is the one with highest probability.   
-![figp4a](https://github.com/haonen/Markdown-Photos/blob/master/p4a.JPG?raw=true)
+```
+THEFT                               28.822
+DECEPTIVE PRACTICE                  15.651
+BATTERY                             15.496
+CRIMINAL DAMAGE                      8.006
+OTHER OFFENSE                        5.940
+ASSAULT                              4.855
+ROBBERY                              4.804
+MOTOR VEHICLE THEFT                  4.649
+CRIMINAL TRESPASS                    4.390
+BURGLARY                             3.151
+NARCOTICS                            0.930
+SEX OFFENSE                          0.775
+OFFENSE INVOLVING CHILDREN           0.568
+CRIM SEXUAL ASSAULT                  0.465
+WEAPONS VIOLATION                    0.413
+PROSTITUTION                         0.310
+PUBLIC PEACE VIOLATION               0.207
+INTERFERENCE WITH PUBLIC OFFICER     0.207
+STALKING                             0.103
+OBSCENITY                            0.103
+NON-CRIMINAL                         0.103
+ARSON                                0.052
+```
 
 ## B
 The commnuity area code for Uptown is 3 and for Garfield Park is 26 and 17. For each year report, I first filter out the theft records and then filter out the records happened in Uptown or Garfield Park. Dividing the value counts for each community area by the length of theft records for each year, I can come up with the estimates of probability. 
