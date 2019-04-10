@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 CAPP30254 HW1
 
@@ -29,7 +28,7 @@ crimes = crimes_2017.append(crimes_2018)
 
 ##############
 # Problem 1  #
-#############
+##############
 
 #differences in reports length
 len(crimes_2017)-len(crimes_2018)
@@ -103,7 +102,7 @@ fig2.savefig('loc_pro.png')
 
 ##############
 # Problem 2  #
-#############
+##############
 # filter dataframe
 coltype = {'unemployment rate': float, 'poverty rate': float}
 acs_2017 = pd.read_csv('acs_data.csv', dtype=coltype)
@@ -184,7 +183,7 @@ def create_radar(group1, group2, df):
     Output:
         create and save the radar chart
     '''
-    # ------- PART 1: Create background
+    # PART 1: Create background
     categories=list(df)[1:]
     N = len(categories)
     angles = [n / float(N) * 2 * pi for n in range(N)]
@@ -196,7 +195,7 @@ def create_radar(group1, group2, df):
     ax.set_rlabel_position(0)
     plt.yticks([10,20,30,40,50,60], ["10","20","30","40","50","60"], color="grey", size=7)
     plt.ylim(0,60)
-    # ------- PART 2: Add plots
+    # PART 2: Add plots
     # group1
     values=df.loc[0].drop('group').values.flatten().tolist()
     values += values[:1]
@@ -305,7 +304,7 @@ create_radar('Deceptive Practice', 'Sex Offense', df)
 
 ##############
 # Problem 3  #
-#############
+##############
 
 # Part 2
 def get_july_record(df, crime, pattern):
@@ -375,7 +374,7 @@ print("Motor vehicle theft increase:{}%".format(round(compute_increase(
 
 ##############
 # Problem 4  #
-#############
+##############
 
 #Part A
 NSS = crimes_2017[crimes_2017['Community Area'] == 33]
