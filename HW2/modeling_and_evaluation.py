@@ -3,6 +3,7 @@ HW 2: Modeling and evaluation
 Yuwei Zhang
 """
 
+import numpy as np
 from sklearn import tree
 from sklearn import preprocessing
 from sklearn.metrics import jaccard_similarity_score
@@ -39,6 +40,18 @@ def split_data(X, y, test_size):
     print('Test set:', X_test.shape,  y_test.shape)
     return X_train, X_test, y_train, y_test
 
+def get_label(pred_score, threshold):
+    '''
+    Get the label of test data based on choosen threshold
+    Inputs:
+        pred_score(numpy array): an arrary of predicted probability
+        threshold(float): the threshold to choose labels
+    Returns:
+        an array of predicted labels
+    '''
+    pred_label = np.array(list(map(lambda x: 1 if x > threshold else 0, pred_score)))
+    return pred_label
+
 
 def fit_and_evaluation(x_train, y_train, x_test, y_test):
     '''
@@ -56,7 +69,8 @@ def fit_and_evaluation(x_train, y_train, x_test, y_test):
         creditTree = tree.DecisionTreeClassifier(criterion="entropy", max_depth=d)
         creditTree.fit(x_train, y_train)
         # Predicting
-        DT_yhat = creditTree.predict(x_test)
+        DT_score = creditTree.predict_proba(x_test)[:,1]
+        DT_yhat = get_label(DT_score, 0.4)
         print('evaluation for max_depth = {}:'.format(d))
         print()
         # Jaccard Index
