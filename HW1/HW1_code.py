@@ -115,7 +115,7 @@ DP_2017 = crimes_2017[crimes_2017['Primary Type'] == 'DECEPTIVE PRACTICE']
 SO_2017 = crimes_2017[crimes_2017['Primary Type'] == 'SEX OFFENSE']
 
 #get zipcode through latitude and longitude (using google map api)
-gmaps_key = googlemaps.Client(key='AIzaSyABYmQbCm2aro_JDQkTV_Td96fvUA6g_nY')
+gmaps_key = googlemaps.Client(key=<Your GoogleMap API Key>)
 
 def pick_zipcode(row):
     '''
