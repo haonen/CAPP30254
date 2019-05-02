@@ -1,4 +1,5 @@
 # HW3
+According to the feedback of Assignment 2, I lack of a readme explaining my pipeline. So I include this file.   
 * ```preprocess.py```: module about data imputation, discretization and hot encoding. 
 * ```exploration.py```: module about data exploration. Including functions about plotting count plots and heatmap.
 * ```modeling.py```: module about building different models and predicting with test sets.
