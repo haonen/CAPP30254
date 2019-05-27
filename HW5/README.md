@@ -5,3 +5,4 @@
 * ```evaluation.py```:module about different evaluation metrics, relevant plots.
 * ```HW5_output.ipynb```: jupyter notebook about how I implement these pipelines. 
 * ```write_up.pdf```: written analysis about this project
+* ```grpah```: a folder contains all the precision and recall curves, roc curves plots.
